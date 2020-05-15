@@ -1,0 +1,24 @@
+{
+    "db": {
+        "master": {
+            "host": "127.0.0.1",
+            "user": "root",
+            "password": "",
+            "database": "personal_blog",
+            "connectionLimit": 500,
+			"port": 3306,
+            "debug":  false
+        },
+        "slave": {
+            "host": "127.0.0.1",
+            "user": "root",
+            "password": "",
+            "database": "personal_blog",
+            "connectionLimit": 500,
+			"port": 3306,
+            "debug":  false
+        }
+    },
+    "application" : "Personal Blog",
+    "environment" : "testing"
+}
