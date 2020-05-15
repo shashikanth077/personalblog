@@ -1,6 +1,5 @@
 # personalblog
 
-# PersonalBlog
 Created personal blog using react js and node js with mySQL DB
 
 Install node first.
