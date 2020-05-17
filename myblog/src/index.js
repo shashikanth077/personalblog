@@ -13,6 +13,7 @@ import personalReducer from './store/reducers/personal';
 import aboutReducer from './store/reducers/about';
 import serviceReducer from './store/reducers/services';
 import contactReducer from './store/reducers/contact';
+import blogReducer from './store/reducers/blog'
 import * as serviceWorker from './serviceWorker';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
   personal: personalReducer,
   about:aboutReducer,
   services:serviceReducer,
-  contact:contactReducer
+  contact:contactReducer,
+  blog:blogReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

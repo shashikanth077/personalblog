@@ -15,6 +15,14 @@ module.exports.getSkills = (id,callback) => {
     });
 }
 
+module.exports.getBlogs = (id,callback) => {
+    let strQuery = 'select * from blog';
+	let arrFields = [];
+    db.select("slave",strQuery, arrFields, function (arrResults) {
+        callback(arrResults);
+    });
+}
+
 module.exports.getServices = (id,callback) => {
     let strQuery = 'select * from services';
 	let arrFields = [];

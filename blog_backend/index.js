@@ -5,9 +5,14 @@ const pino = require('express-pino-logger')();
 const cors = require('cors');
 require(__basedir + '/config/globals');
 
+
 const app = express();
 app.use(cors());
 app.use(pino);
+
+app.use('/static', express.static('public'))
+
+//console.log(__dirname);
 
 app.use(bodyParser.urlencoded({
 	extended: true

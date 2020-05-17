@@ -13,3 +13,7 @@ export {
 export {
     InsertContact,
 } from './contact';
+
+export {
+    fetchblogs,
+} from './blog';

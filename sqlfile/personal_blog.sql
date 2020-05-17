@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 05:57 PM
+-- Generation Time: May 17, 2020 at 10:54 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `personal_blog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL,
+  `blog_type` varchar(100) NOT NULL,
+  `blog_description` text NOT NULL,
+  `blog_title` varchar(100) NOT NULL,
+  `blog_author` varchar(100) NOT NULL,
+  `blog_image` varchar(400) NOT NULL,
+  `created_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`id`, `blog_type`, `blog_description`, `blog_title`, `blog_author`, `blog_image`, `created_date`) VALUES
+(1, 'Web Development', 'Explained how to create REST API with mysql and php.', 'REST API using PHP and MySQL', 'Shashikanth HR', 'http://localhost:3030/static/blog/images/post-1.jpg', '2020-05-17 00:00:00'),
+(2, 'Web Development', 'Explained how to create REST API with mysql and php.', 'REST API using PHP and MySQL', 'Shashikanth HR', 'http://localhost:3030/static/blog/images/post-1.jpg', '2020-05-17 00:00:00'),
+(3, 'Web Development', 'Explained how to create REST API with mysql and php.', 'REST API using PHP and MySQL', 'Shashikanth HR', 'http://localhost:3030/static/blog/images/post-1.jpg', '2020-05-17 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -123,6 +148,12 @@ INSERT INTO `user_details` (`id`, `name`, `designation`, `email`, `phone`, `desc
 --
 
 --
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -149,6 +180,12 @@ ALTER TABLE `user_details`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contact`
