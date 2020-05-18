@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Services.css";
 import { GrPersonalComputer } from "react-icons/gr";
+import PropTypes from 'prop-types';
 
 const Services = (props) => {
    return <section id="service" className="services-mf route">
@@ -18,8 +19,8 @@ const Services = (props) => {
      </div>
 
      <div className="row">
-        {props.services.map(data => (
-       <div className="col-md-4">
+        {props.services.map((data,index) => (
+       <div key ={data.index} className="col-md-4">
          <div className="service-box">
            <div className="service-ico">
              <span className="ico-circle"><GrPersonalComputer /></span>
@@ -36,6 +37,10 @@ const Services = (props) => {
     </div>
    </div>
  </section>
+}
+
+Services.prototype = {
+  services:PropTypes.object
 }
 
 export default Services;

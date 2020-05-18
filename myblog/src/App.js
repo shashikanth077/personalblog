@@ -3,6 +3,7 @@ import Layout from './hoc/Layout/Layout';
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import Home from './containers/Banner/Banner';
+import ErrorBoundary from './hoc/ErrorBoundary/ErrorBoundary'
 
 const asyncAbout = asyncComponent(() => {
   return import('./containers/About/About');
@@ -38,7 +39,10 @@ class App extends Component {
       <div>
        
         <Layout>
-          {mainroute}
+          <ErrorBoundary>
+            {mainroute}
+          </ErrorBoundary>
+ 
         </Layout>
       </div>
     );

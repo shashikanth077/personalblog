@@ -64,4 +64,5 @@ const contact = (props) => {
   </section>
 }
 
+
 export default contact;

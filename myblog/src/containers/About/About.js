@@ -12,8 +12,7 @@ class About extends Component {
     componentDidMount () {
         this.props.onFetchAboutData();
     }
-   
-    
+      
     
     render() {
 

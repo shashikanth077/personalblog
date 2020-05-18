@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavigationItem.css';
+import PropTypes from 'prop-types';
 
 const navigationItem = ( props ) => (
     <li className="nav-item">
@@ -11,4 +12,10 @@ const navigationItem = ( props ) => (
     </li>
 );
 
+
+navigationItem.propTypes = {
+    link:PropTypes.string,
+    exact:PropTypes.bool,
+  }
+  
 export default navigationItem;

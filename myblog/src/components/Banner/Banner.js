@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Banner.css";
 import Typist from 'react-typist';
+import PropTypes from 'prop-types';
 
 const Banner = (props) => {
    return <div className="intro route bg-image home" style={props.style}>
@@ -14,6 +15,11 @@ const Banner = (props) => {
       </div>
     </div>
   </div>
+}
+
+Banner.propTypes = {
+  name:PropTypes.string,
+  designation:PropTypes.string,
 }
 
 export default Banner;

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./About.css";
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import PropTypes from 'prop-types';
 
 const About = (props) => {
    return <section id="about" className="about-mf sect-pt4 route">
@@ -58,6 +59,14 @@ const About = (props) => {
      </div>
    </div>
  </section>
+}
+
+About.propTypes = {
+    name:PropTypes.string,
+    email:PropTypes.string,
+    designation:PropTypes.string,
+    description:PropTypes.string,
+    skills:PropTypes.array
 }
 
 export default About;
