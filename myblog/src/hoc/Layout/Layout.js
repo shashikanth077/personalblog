@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Aux from '../Auxiliary';
 import classes from './Layout.css';
+import Footer from '../../components/Footer/Footer'
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Layout extends Component {
@@ -13,6 +14,7 @@ class Layout extends Component {
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>
+                <Footer />
             </Aux>
         )
     }
