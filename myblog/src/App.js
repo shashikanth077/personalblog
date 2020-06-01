@@ -21,6 +21,10 @@ const asyncBlog = asyncComponent(() => {
   return import('./containers/Blog/Blog');
 });
 
+const asynBlogDetails = asyncComponent(() => {
+  return import('./containers/BlogDetails/BlogDetails');
+});
+
 class App extends Component {
  
   render () {
@@ -32,6 +36,7 @@ class App extends Component {
           <Route path="/services" component={asyncServices} />
           <Route path="/contact" component={asyncContact} />
           <Route path="/blog" component={asyncBlog} />
+          <Route path="/blogdetails" component={asynBlogDetails} />
         </Switch>
       );
     

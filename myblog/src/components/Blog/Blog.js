@@ -1,5 +1,6 @@
 import React from 'react';
 import './Blog.css';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Blog = (props) => {
@@ -7,12 +8,14 @@ const Blog = (props) => {
     return <div className="col-md-4">
           <div className="card card-blog">
             <div className="card-img">
-            <a href="#" ><img  className="img-fluid" src={props.image} alt={props.blog_title} /></a>  
+            <Link to={{pathname : '/blogdetails', state: {orderID: props.id}}}>
+              <img  className="img-fluid" src={props.image} alt={props.blog_title} />
+            </Link>  
             </div>
             <div className="card-body">
               <div className="card-category-box">
                 <div className="card-category">
-<h6 className="category">{props.blog_type}</h6>
+                      <h6 className="category">{props.blog_type}</h6>
                 </div>
               </div>
               <h3 className="card-title"><a href="#">See more details about {props.blog_type}</a></h3>

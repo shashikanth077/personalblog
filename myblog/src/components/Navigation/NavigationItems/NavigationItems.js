@@ -8,7 +8,6 @@ const navigationItems = ( props ) => (
         <NavigationItem link="/services" >Services</NavigationItem>
         <NavigationItem link="/blog" >Blog</NavigationItem>
         <NavigationItem link="/contact" >Contact</NavigationItem>
-      
     </ul>
 );
 

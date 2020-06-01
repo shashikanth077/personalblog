@@ -17,3 +17,7 @@ export {
 export {
     fetchblogs,
 } from './blog';
+
+export {
+    fetchblogDetails,
+} from './blogdetails';

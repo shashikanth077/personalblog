@@ -24,6 +24,7 @@ class Blog extends Component {
                 <Blg
                     key={data.id}
                     image={data.blog_image}
+                    id={data.id}
                     blog_author={data.blog_author}
                     created_date={data.created_date}
                     blog_title={data.blog_title}
