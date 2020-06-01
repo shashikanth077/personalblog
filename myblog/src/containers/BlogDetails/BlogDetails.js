@@ -18,20 +18,13 @@ class BlogDetails extends Component {
         let data = <Spinner />
         if(!this.props.loading) {
         
-            //    console.log(this.props.blogdetails);
-            if(this.props.blogdetails != undefined) {
-             data = this.props.blogdetails.map( data => (
-                <Details
-                    key={data.id}
-                    image={data.blog_image}
-                    blog_author={data.blog_author}
-                    blog_image={data.blog_image}
-                    created_date={data.created_date}
-                    blog_title={data.blog_title}
-                    blog_type={data.blog_type}
-                    blog_description={data.blog_description} />
-            ) )
-            }
+            console.log(this.props);
+           
+             if(this.props.blogdetails != undefined) {
+                console.log(this.props.blogdetails);
+                data  =    <Details recentpost={this.props.blogdetails[0].recentpost} tags={this.props.blogdetails[0].tags} blogdetails = {this.props.blogdetails[0].blogDetails} />
+            
+             }
   
         }
 
